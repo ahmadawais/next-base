@@ -68,8 +68,9 @@ hr {
 	);
 }
 
-p {
-	font: 400 1.8rem/1.45 'Recoleta', Georgia, sans-serif;
+p,
+a {
+	font: 400 1.6rem/1.45 'Recoleta', Georgia, sans-serif;
 	font-weight: 400;
 	font-size: 1.8rem;
 }

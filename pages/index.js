@@ -43,16 +43,9 @@ const Heading = styled.h1`
 
 const Button = styled.a`
 	text-decoration: none;
-	color: ${props => props.theme.b};
-	background: ${props => props.theme.y};
+	color: ${props => props.theme.w};
+	background: ${props => props.theme.purple};
 	padding: ${props => (props.theme.vr * 1) / 2}rem ${props => props.theme.vr * 1}rem;
-
-	${rmq('xl')} {
-		background: ${props => props.theme.y};
-	}
-	${rmq('t')} {
-		background: ${props => props.theme.green};
-	}
 `;
 
 export default Home;
