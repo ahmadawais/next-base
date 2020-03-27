@@ -1,18 +1,12 @@
 import styled from '@emotion/styled';
-import { ThemeProvider } from 'emotion-theming';
 import rmq from 'styled-rmq';
-import GlobalCSS from '../utils/GlobalCSS';
-import theme from '../utils/theme';
 
 // Component.
 const Home = () => (
-	<ThemeProvider theme={theme}>
-		<GlobalCSS />
-		<Wrap>
-			<Text>Next.js Base</Text>
-			<Button href="#">GitHub</Button>
-		</Wrap>
-	</ThemeProvider>
+	<Wrap>
+		<Heading>Next.js Base</Heading>
+		<Button href="https://github.com/ahmadawais/next-base">🌟 Next.js Base</Button>
+	</Wrap>
 );
 
 // Styles.
@@ -23,21 +17,7 @@ const Wrap = styled.div`
 	max-width: 750px;
 `;
 
-const Button = styled.a`
-	text-decoration: none;
-	color: ${props => props.theme.b};
-	background: ${props => props.theme.y};
-	padding: ${props => (props.theme.vr * 1) / 2}rem ${props => props.theme.vr * 1}rem;
-
-	${rmq('xl')} {
-		background: ${props => props.theme.y};
-	}
-	${rmq('t')} {
-		background: ${props => props.theme.green};
-	}
-`;
-
-const Text = styled.h1`
+const Heading = styled.h1`
 	color: hotpink;
 	margin-bottom: ${props => props.theme.vr * 1}rem;
 
@@ -58,6 +38,20 @@ const Text = styled.h1`
 	}
 	${rmq('mm')} {
 		font-size: 2rem;
+	}
+`;
+
+const Button = styled.a`
+	text-decoration: none;
+	color: ${props => props.theme.b};
+	background: ${props => props.theme.y};
+	padding: ${props => (props.theme.vr * 1) / 2}rem ${props => props.theme.vr * 1}rem;
+
+	${rmq('xl')} {
+		background: ${props => props.theme.y};
+	}
+	${rmq('t')} {
+		background: ${props => props.theme.green};
 	}
 `;
 
